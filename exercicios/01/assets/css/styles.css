@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.title-container {
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72);
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.title-container p {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card-header {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+h5,
+p {
+    text-align: center;
+}
