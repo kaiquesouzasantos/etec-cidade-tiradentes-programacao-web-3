@@ -42,29 +42,25 @@ const CATEGORIAS = {
 }
 
 function retornaEstadoIMC(imc){
-    let retorno;
-
     if (imc < 18.5) {
-        retorno = "Abaixo do Peso"
         CATEGORIAS.abaixoDoPeso++
+        return "Abaixo do Peso"
     } else if (imc >= 18.5 && imc < 25) {
-        retorno = "Peso Normal"
         CATEGORIAS.pesoNormal++
+        return "Peso Normal"
     } else if (imc >= 25 && imc < 30) {
-        retorno = "Sobrepeso";
         CATEGORIAS.sobrepeso++
+        return "Sobrepeso";
     } else if (imc >= 30 && imc < 35) {
-        retorno = "Obesidade Grau I"
         CATEGORIAS.obesidade1++
+        return "Obesidade Grau I"
     } else if (imc >= 35 && imc < 40) {
-        retorno = "Obesidade Grau II"
         CATEGORIAS.obesidade2++
+        return "Obesidade Grau II"
     } else {
-        retorno = "Obesidade Grau III"
         CATEGORIAS.obesidade3++
+        return "Obesidade Grau III"
     }
-
-    return retorno
 }
 
 function apresentaInformacoesPessoa({nome, imc}){
