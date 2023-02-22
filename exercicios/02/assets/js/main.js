@@ -1,3 +1,14 @@
+let CATEGORIAS = {
+    abaixoDoPeso:0,
+    pesoNormal:0,
+    sobrepeso:0,
+    obesidade1:0,
+    obesidade2:0,
+    obesidade3:0
+}
+
+let contadorExecucao = 0
+
 class Pessoa {
     constructor(nome, idade, peso, altura){
         this.nome = nome
@@ -5,10 +16,35 @@ class Pessoa {
         this.peso = peso
         this.altura = altura
         this.imc = this.calculaIMC()
+        this.estadoCorporal = this.estadoIMC()
     }
 
     calculaIMC(){
         return (this.peso / (this.altura * this.altura)).toFixed(2)
+    }
+
+    estadoIMC(){
+        if(this.imc <= 0) return "N/A"
+
+        if (this.imc < 18.5) {
+            CATEGORIAS.abaixoDoPeso++
+            return "Abaixo do Peso"
+        } else if (this.imc >= 18.5 && this.imc < 25) {
+            CATEGORIAS.pesoNormal++
+            return "Peso Normal";
+        } else if (this.imc >= 25 && this.imc < 30) {
+            CATEGORIAS.sobrepeso++
+            return "Sobrepeso"
+        } else if (this.imc >= 30 && this.imc < 35) {
+            CATEGORIAS.obesidade1++
+            return "Obesidade Grau I"
+        } else if (this.imc >= 35 && this.imc < 40) {
+            CATEGORIAS.obesidade2++
+            return "Obesidade Grau II"
+        } else {
+            CATEGORIAS.obesidade3++
+            return "Obesidade Grau III"
+        }
     }
 }
 
@@ -32,56 +68,58 @@ const LISTA_PESSOAS = [
     new Pessoa('Artur', 32, 110, 1.95)
 ]
 
-const CATEGORIAS = {
-    abaixoDoPeso:0,
-    pesoNormal:0,
-    sobrepeso:0,
-    obesidade1:0,
-    obesidade2:0,
-    obesidade3:0
+function escreveHTML(id, conteudo){
+    document.getElementById(id).innerHTML = conteudo
 }
 
-function retornaEstadoIMC(imc){
-    if (imc < 18.5) {
-        CATEGORIAS.abaixoDoPeso++
-        return "Abaixo do Peso"
-    } else if (imc >= 18.5 && imc < 25) {
-        CATEGORIAS.pesoNormal++
-        return "Peso Normal"
-    } else if (imc >= 25 && imc < 30) {
-        CATEGORIAS.sobrepeso++
-        return "Sobrepeso";
-    } else if (imc >= 30 && imc < 35) {
-        CATEGORIAS.obesidade1++
-        return "Obesidade Grau I"
-    } else if (imc >= 35 && imc < 40) {
-        CATEGORIAS.obesidade2++
-        return "Obesidade Grau II"
-    } else {
-        CATEGORIAS.obesidade3++
-        return "Obesidade Grau III"
-    }
+function excluiHTML(id){
+    try{
+        document.getElementById(id).remove()
+    } catch(erro){}
 }
 
-function apresentaInformacoesPessoa({nome, imc}){
+function apresentaInformacoes({nome, imc, estadoCorporal}){
     document
         .getElementById("container")
-        .innerHTML += '<div class="card mb-3"><div class="card-header"><strong>'+nome+'</strong></div><div class="card-body"><p class="card-text">Possui um IMC de '+imc+', sendo considerado '+retornaEstadoIMC(imc)+'!</p></div></div>'
+        .innerHTML += '<div class="card mb-3" id="'+nome+imc+estadoCorporal+'"><div class="card-header"><strong>'+nome+'</strong></div><div class="card-body"><p class="card-text">Possui um IMC de '+imc+', sendo considerado '+estadoCorporal+'</p></div></div>'
+}
+
+function removeInformacoes({nome, imc, estadoCorporal}){
+    excluiHTML(nome+imc+estadoCorporal)
 }
 
 function apresentaInformacoesSumarizadas(){
-    document.getElementById("abaixoDoPeso").innerHTML = CATEGORIAS.abaixoDoPeso
-    document.getElementById("pesoNormal").innerHTML = CATEGORIAS.pesoNormal
-    document.getElementById("sobrepeso").innerHTML = CATEGORIAS.sobrepeso
-    document.getElementById("obesidade1").innerHTML = CATEGORIAS.obesidade1
-    document.getElementById("obesidade2").innerHTML = CATEGORIAS.obesidade2
-    document.getElementById("obesidade3").innerHTML = CATEGORIAS.obesidade3
+    if(contadorExecucao > 0) return
+
+    escreveHTML("abaixoDoPeso", CATEGORIAS.abaixoDoPeso)
+    escreveHTML("pesoNormal", CATEGORIAS.pesoNormal)
+    escreveHTML("sobrepeso", CATEGORIAS.sobrepeso)
+    escreveHTML("obesidade1", CATEGORIAS.obesidade1)
+    escreveHTML("obesidade2", CATEGORIAS.obesidade2)
+    escreveHTML("obesidade3", CATEGORIAS.obesidade3)
+
+    contadorExecucao++
 }
 
-function main(){
-    for(pessoa of LISTA_PESSOAS){
-        apresentaInformacoesPessoa(pessoa)
-    }
+function apresentaTodasInformacoesFiltradas(categoria){
+    LISTA_PESSOAS
+        .filter(pessoa => pessoa.estadoIMC() == categoria)
+        .forEach(pessoa => apresentaInformacoes(pessoa))
+}
+
+function removeTodasInformacoes(){
+    LISTA_PESSOAS
+        .forEach(pessoa => removeInformacoes(pessoa))
+}
+
+function main(categoria = null){
+    if(categoria == null){
+        LISTA_PESSOAS
+            .forEach(pessoa => apresentaInformacoes(pessoa))
+    } else {
+        removeTodasInformacoes()
+        apresentaTodasInformacoesFiltradas(categoria)
+    } 
 
     apresentaInformacoesSumarizadas()
 }
