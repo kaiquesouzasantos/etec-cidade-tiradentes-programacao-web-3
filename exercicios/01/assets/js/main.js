@@ -5,10 +5,29 @@ class Pessoa {
         this.peso = peso
         this.altura = altura
         this.imc = this.calculaIMC()
+        this.estadoCorporal = this.estadoIMC()
     }
 
     calculaIMC(){
         return (this.peso / (this.altura * this.altura)).toFixed(2)
+    }
+
+    estadoIMC(){
+        if(this.imc <= 0) return "N/A"
+
+        if (this.imc < 18.5) {
+            return "Abaixo do Peso"
+        } else if (this.imc >= 18.5 && this.imc < 25) {
+            return "Peso Normal";
+        } else if (this.imc >= 25 && this.imc < 30) {
+            return "Sobrepeso"
+        } else if (this.imc >= 30 && this.imc < 35) {
+            return "Obesidade Grau I"
+        } else if (this.imc >= 35 && this.imc < 40) {
+            return "Obesidade Grau II"
+        } else {
+            return "Obesidade Grau III"
+        }
     }
 }
 
@@ -20,30 +39,14 @@ const LISTA_PESSOAS = [
     new Pessoa('Lucas', 32, 110, 1.95)
 ]
 
-function retornaEstadoIMC(imc){
-    if (imc < 18.5) {
-        return "Abaixo do   Peso!"
-    } else if (imc >= 18.5 && imc < 25) {
-        return "Peso Normal!";
-    } else if (imc >= 25 && imc < 30) {
-        return "Sobrepeso!"
-    } else if (imc >= 30 && imc < 35) {
-        return "Obesidade Grau I !"
-    } else if (imc >= 35 && imc < 40) {
-        return "Obesidade Grau II !"
-    } else {
-        return "Obesidade Grau III !"
-    }
-}
-
-function apresentaInformacoes({nome, imc}){
+function apresentaInformacoes({nome, imc, estadoCorporal}){
     document
         .getElementById("container")
-        .innerHTML += '<div class="card mb-3"><div class="card-header"><strong>'+nome+'</strong></div><div class="card-body"><p class="card-text">Possui um IMC de '+imc+', sendo considerado '+retornaEstadoIMC(imc)+'</p></div></div>'
+        .innerHTML += '<div class="card mb-3"><div class="card-header"><strong>'+nome+'</strong></div><div class="card-body"><p class="card-text">Possui um IMC de '+imc+', sendo considerado '+estadoCorporal+'</p></div></div>'
 }
 
 function main(){
-    for(pessoa of LISTA_PESSOAS){
-        apresentaInformacoes(pessoa)
-    }
+    LISTA_PESSOAS.forEach(
+        pessoa => apresentaInformacoes(pessoa)
+    )
 }
