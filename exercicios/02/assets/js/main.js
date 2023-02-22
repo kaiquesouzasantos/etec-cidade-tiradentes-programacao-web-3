@@ -89,16 +89,18 @@ function removeInformacoes({nome, imc, estadoCorporal}){
 }
 
 function apresentaInformacoesSumarizadas(){
-    if(contadorExecucao > 0) return
+    if(contadorExecucao > 0) {
+        return
+    } else {
+        escreveHTML("abaixoDoPeso", CATEGORIAS.abaixoDoPeso)
+        escreveHTML("pesoNormal", CATEGORIAS.pesoNormal)
+        escreveHTML("sobrepeso", CATEGORIAS.sobrepeso)
+        escreveHTML("obesidade1", CATEGORIAS.obesidade1)
+        escreveHTML("obesidade2", CATEGORIAS.obesidade2)
+        escreveHTML("obesidade3", CATEGORIAS.obesidade3)
 
-    escreveHTML("abaixoDoPeso", CATEGORIAS.abaixoDoPeso)
-    escreveHTML("pesoNormal", CATEGORIAS.pesoNormal)
-    escreveHTML("sobrepeso", CATEGORIAS.sobrepeso)
-    escreveHTML("obesidade1", CATEGORIAS.obesidade1)
-    escreveHTML("obesidade2", CATEGORIAS.obesidade2)
-    escreveHTML("obesidade3", CATEGORIAS.obesidade3)
-
-    contadorExecucao++
+        contadorExecucao++
+    }
 }
 
 function apresentaTodasInformacoesFiltradas(categoria){
