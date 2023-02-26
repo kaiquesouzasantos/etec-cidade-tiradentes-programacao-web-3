@@ -1,20 +1,9 @@
 import { CATEGORIAS } from "./categorias.js"
-import { LISTA_PESSOAS } from "./listaPessoas.js"
 
 let contadorExecucao = 0
 
 function escreveHTML(id, conteudo){
     document.getElementById(id).innerHTML = conteudo
-}
-
-function excluiHTML(id){
-    try{
-        document.getElementById(id).remove()
-    } catch(erro){}
-}
-
-function removeInformacoes({nome, imc, estadoCorporal}){
-    excluiHTML(nome+imc+estadoCorporal)
 }
 
 export function apresentaInformacoes({nome, imc, estadoCorporal}){
@@ -36,15 +25,4 @@ export function apresentaInformacoesSumarizadas(){
 
         contadorExecucao++
     }
-}
-
-export function apresentaTodasInformacoesFiltradas(categoria){
-    LISTA_PESSOAS
-        .filter(pessoa => pessoa.estadoIMC() == categoria)
-        .forEach(pessoa => apresentaInformacoes(pessoa))
-}
-
-export function removeTodasInformacoes(){
-    LISTA_PESSOAS
-        .forEach(pessoa => removeInformacoes(pessoa))
 }
