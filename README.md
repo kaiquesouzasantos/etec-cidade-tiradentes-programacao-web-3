@@ -17,8 +17,7 @@
   - Tipos de Dados Primitivos;
   - *Operadores*: Aritmeticos, Relacionais, Atribuição e Lógicos;
   - *Estrutura de Decisão*: IF, ELSE, ELSE IF, SWITCH;
-  - Metodos;
-  - Classes e Objetos;
+  - Metodos, Classes e Objetos;
   - Identificação e Tratamento de Exceções;
   - Estrutura de Dados e Implementações;
   - Boas Praticas e Clean Code.
