@@ -91,9 +91,7 @@ let elementos = [
 
 document.getElementById('btn_proximo')?.addEventListener('click', () => {
   elementos.forEach(
-    (elemento) => {
-      saveValue(elemento)
-    }
+    (elemento) => saveValue(elemento)
   )
 
   window.location.href = 'curriculo.html'
