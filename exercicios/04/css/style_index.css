@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,600"); * {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: none;
+}
+
+html {
+    position: absolute;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+
+.fundo {
+    position: relative;
+    width: 84%;
+    left: 12px;
+    border-radius: 15px;
+}
+
+.retangulo_1 {
+    position: relative;
+    right: 155px;
+    top: -125px;
+    width: 10.3rem;
+}
+
+.retangulo_2 {
+    position: relative;
+    width: 9.3rem;
+    top: -197px;
+    left: 1439px;
+}
+
+.retangulo_3 {
+    position: relative;
+    left: 17px;
+    top: -116px;
+}
+
+.retangulo_4 {
+    position: relative;
+    right: -82px;
+    top: -99px;
+    width: 5.3rem;
+}
+
+.container {
+    position: relative;
+    top: 10px;
+    width: 2000px;
+    height: 10px;
+}
+
+.sobreposta {
+    position: absolute;
+    top: -230px;
+    left: 600px;
+    z-index: 1;
+}
+
+.content {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 96, 245, 0.1) 0px 14px 40px;
+    height: 640px;
+    left: 300px;
+    position: absolute;
+    top: 93px;
+    width: 1100px;
+}
+
+.title {
+    position: absolute;
+    width: 400px;
+    height: 60px;
+    left: 90px;
+    top: 55px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    color: rgb(100, 96, 245);
+}
+
+.title_cargo {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 90px;
+    top: 153px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_cargo {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 183px;
+    left: 90px;
+    width: 275px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+}
+
+.title_name {
+    position: absolute;
+    width: 250px;
+    height: 46px;
+    left: 90px;
+    top: 273px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_name {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 304px;
+    left: -189px;
+    width: 275px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+}
+
+.title_email {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 90px;
+    top: 381px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_email {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 409px;
+    left: -467px;
+    width: 275px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+}
+
+.title_picture {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 516px;
+    top: 191px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.title_telefone {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 404px;
+    top: 273px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_telefone {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 153px;
+    left: 353px;
+    width: 248px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+}
+
+.title_idiomas {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 407px;
+    top: 381px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_nasc {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 258px;
+    left: 103px;
+    width: 248px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+    padding: 1.3rem;
+}
+
+.btn_proximo {
+    position: absolute;
+    width: 565px;
+    height: 67px;
+    left: 88px;
+    top: 515px;
+    background: rgb(104, 101, 245);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Montserrat;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+.btn_proximo:hover {
+    background: rgb(113, 125, 227);
+}
+
+.title_experi {
+    position: absolute;
+    width: 1000px;
+    height: 60px;
+    left: 90px;
+    top: 55px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: rgb(100, 96, 245);
+}
+
+.title_termino {
+    position: absolute;
+    width: 550px;
+    height: 44px;
+    left: 90px;
+    top: 252px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_termino {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 285px;
+    left: -182px;
+    width: 135px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+}
+
+.text_inicio {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 285px;
+    left: -189px;
+    width: 130px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+}
+
+.title_empresa {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 398px;
+    top: 153px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_empresa {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 183px;
+    left: -154px;
+    width: 248px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+    padding: 15px;
+}
+
+.title_cidade {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 397px;
+    top: 251px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+}
+
+.text_cidade {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 283px;
+    left: -405px;
+    width: 248px;
+    height: 51px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+}
+
+.title_descricao1 {
+    position: absolute;
+    width: 250px;
+    height: 44px;
+    left: 93px;
+    top: 357px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgb(100, 96, 245);
+    text-align: center;
+    display: flex;
+}
+
+.text_descricao1 {
+    position: relative;
+    background: rgb(243, 245, 255);
+    top: 338px;
+    left: 91px; 
+    padding: 30px;
+    max-width: 557px;
+    min-height: 112px;
+    min-width: 557px;
+    width: 557px;
+    max-height: 112px;
+    height: 112px;
+    border-radius: 10px;
+    font-family: Montserrat;
+    color: rgb(142, 142, 142);
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.btn_voltar {
+    position: absolute;
+    width: 275px;
+    height: 67px;
+    left: 92px;
+    top: 515px;
+    background: rgb(104, 101, 245);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Montserrat;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+.btn_voltar:hover {
+    background: rgb(113, 125, 227);
+}
+
+.btn_proximo2 {
+    position: absolute;
+    width: 275px;
+    height: 67px;
+    left: 380px;
+    top: 515px;
+    background: rgb(104, 101, 245);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: Montserrat;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+.btn_proximo2:hover {
+    background: rgb(113, 125, 227);
+}
+
+input {
+    text-align: center;
+}
+
+.containerP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    z-index: 999;
+}
+
+.containerP .steps {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.steps .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 47px;
+    color: rgb(104, 101, 245);
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 50%;
+    background: rgb(243, 245, 255);
+    border: 4px solid rgb(104, 101, 245);
+    transition: all 200ms ease 0s;
+    top: 146px;
+    left: 957px;
+    position: relative;
+    font-family: Montserrat;
+}
+
+.steps .circle.active {
+    transition-delay: 100ms;
+    border-color: rgb(104, 101, 245);
+    color: rgb(255, 255, 255);
+    background: rgb(104, 101, 245);
+    font-family: Montserrat;
+}
+
+.steps .progress-bar {
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: rgb(224, 224, 224);
+    z-index: 1;
+}
+
+.progress-bar .indicator {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: rgb(104, 101, 245);
+    transition: all 300ms ease 0s;
+    top: 165px;
+    left: 999px;
+    z-index: 999;
+    display: none;
+}
+
+.containerP .buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons button {
+    padding: 8px 25px;
+    background: rgb(104, 101, 245);
+    border: none;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    transition: all 200ms linear 0s;
+}
+
+.buttons button:active {
+    transform: scale(0.97);
+}
+
+.buttons button:disabled {
+    background: rgb(135, 165, 248);
+    cursor: not-allowed;
+}
+
+.line_line {
+    position: absolute;
+    top: 172px;
+    left: 1115px;
+    z-index: 999;
+    height: 5px;
+    border-radius: 10px;
+    width: 28px;
+}
+
+.line_line2 {
+    position: absolute;
+    top: 172px;
+    left: 1193px;
+    z-index: 999;
+    height: 5px;
+    border-radius: 10px;
+    width: 28px;
+}
+
+.curriculo {
+    position: absolute;
+    z-index: 999;
+    width: 320px;
+    height: 430px;
+    top: 244px;
+    left: 1048px;
+    border: 10px solid rgb(102, 99, 245);
+    border-radius: 10px;
+}
+
+#picture__input {
+    display: none;
+}
+
+.picture {
+    width: 100px;
+    aspect-ratio: 16 / 9;
+    background: rgb(243, 245, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(170, 170, 170);
+    border: 2px dashed rgb(120, 125, 245);
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out 0s, background 300ms ease-in-out 0s;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    top: 103px;
+    left: 405px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+.picture:hover {
+    color: rgb(119, 119, 119);
+    background: rgb(204, 204, 204);
+}
+
+.picture:active {
+    border-color: rgb(102, 99, 245);
+    color: rgb(102, 99, 245);
+    background: rgb(238, 238, 238);
+}
+
+.picture:focus {
+    color: rgb(119, 119, 119);
+    background: rgb(204, 204, 204);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px;
+}
+
+.picture__img {
+    max-width: 100%;
+}
+
+.avatar {
+    position: relative;
+    height: 50px;
+    top: 40px;
+    left: 430px;
+    pointer-events: none;
+}
+
+
+.line3{
+    position: absolute;
+    top: 172px;
+    left: 1271px;
+    z-index: 999;
+    height: 5px;
+    border-radius: 10px;
+    width: 28px;
+}
