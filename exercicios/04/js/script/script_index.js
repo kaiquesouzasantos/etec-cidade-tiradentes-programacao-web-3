@@ -96,3 +96,5 @@ document.getElementById('btn_proximo')?.addEventListener('click', () => {
 
   window.location.href = 'curriculo.html'
 })
+
+

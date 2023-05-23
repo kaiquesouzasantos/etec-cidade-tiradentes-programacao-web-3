@@ -49,3 +49,8 @@ document.getElementById('curriculo')?.addEventListener('mouseover', () => {
 
 document.getElementById('download')?.addEventListener('click', () => window.print())
 
+//ESCONDER IMPRIMIR
+function esconderBotao() {
+  document.querySelector("#download").style.display = "none";
+  window.print()
+}
