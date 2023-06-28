@@ -1,0 +1,38 @@
+#main * {
+    border: 0;
+    float: left;
+    list-style: none;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    text-decoration: none;
+}
+
+#main br {
+    clear: both;
+    float: none;
+}
+
+#main table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+#main caption,
+#main th,
+#main td {
+    text-align: left;
+}
+
+#main blockquote:before,
+#main blockquote:after,
+#main q:before,
+#main q:after {
+    content: "";
+}
+
+#main blockquote,
+#main q {
+    quotes: """";
+}

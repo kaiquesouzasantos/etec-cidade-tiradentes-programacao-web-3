@@ -1,0 +1,57 @@
+section#main {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+section#main p {
+    font-family: 'Helvetica Roman', Arial, Verdana;
+}
+
+main,
+section,
+article,
+header,
+nav {
+    display: block;
+}
+
+
+section#main section section article,
+section#main header nav ul {
+    float: right;
+    position: relative;
+    width: 600px;
+}
+
+section#main section section article h2.blue {
+    color: #009fda;
+}
+
+
+/* Cubo */
+section#main section.cubo {
+    left: 50%;
+    margin-left: -480px;
+    position: absolute;
+    top: 0;
+    width: 960px;
+}
+
+section#main section.cubo #cubo-canvas {
+    height: 390px;
+    margin: 0;
+    position: relative;
+    width: 390px;
+    z-index: 10;
+}
+
+section#main section.cubo #cubo-canvas canvas,
+section#main section.cubo #cubo-canvas img {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+section#main section.cubo #cubo-canvas.fixed {
+    position: fixed;
+}
