@@ -1,6 +1,6 @@
 import { Requester } from './resquest.component.js'
 
-const PRODUTOS = await Requester.returnProducts()
+let PRODUTOS = await Requester.returnProducts()
 
 export class Manipulator {
     static loadProducts() {
