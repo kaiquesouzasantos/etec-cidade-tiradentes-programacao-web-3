@@ -4,4 +4,8 @@ export class Time {
         this.imagem = imagem
         this.pseudonimos = pseudonimos
     }
+
+    getTime() {
+        return this.nome
+    }
 }

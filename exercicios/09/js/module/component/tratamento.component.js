@@ -1,13 +1,15 @@
 import { Partida } from "../model/partida.model.js"
-import { Time } from "../model/time.model.js"
+import { TIMES } from "../data/time.list.js"
 
 export class Tratamento {
-    static factoryTime(nome, imagem, pseudonimos) {
-        return new Time(nome, imagem, pseudonimos)
-    }
-
     static factoryPartida(time_casa, time_visitante, data) {
         return new Partida(time_casa, time_visitante, data)
+    }
+
+    static getTime(nome) {
+        return TIMES.filter(
+            time => time.nome == nome || time.pseudonimos.indexOf(nome) > -1
+        )
     }
 
     static factoryListPartida(lista) {
@@ -17,8 +19,8 @@ export class Tratamento {
             (jogo) => {
                 listaPartida.push(
                     this.factoryPartida(
-                        jogo.home_team.full_name,
-                        jogo.visitor_team.full_name,
+                        this.getTime(jogo.home_team.full_name),
+                        this.getTime(jogo.visitor_team.full_name),
                         jogo.date
                 ))
             }
