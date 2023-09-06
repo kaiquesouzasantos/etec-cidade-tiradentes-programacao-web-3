@@ -7,4 +7,4 @@ document.addEventListener("mouseover", () => {
         Manipulator.loadGames()
         load = true
     }
-});
+})

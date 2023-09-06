@@ -5,17 +5,21 @@ export class Partida {
         this.data = this.formatDate(data)
         this.status = status
         this.season = season
-        this.pontuacao_casa = this.formatPoint(pontuacao_casa)
-        this.pontuacao_visitante = this.formatPoint(pontuacao_visitante)
+        this.pontuacao_casa = this.formatPoint(pontuacao_casa, 100)
+        this.pontuacao_visitante = this.formatPoint(pontuacao_visitante, 100)
     }
 
     formatDate(data) {
         const dataFormat = new Date(data)
-        return `${dataFormat.getUTCDay()}/${dataFormat.getUTCMonth()}/${dataFormat.getUTCFullYear()}`
+        return `
+            ${this.formatPoint(dataFormat.getUTCDay(), 10)}/
+            ${this.formatPoint(dataFormat.getUTCMonth(), 10)}
+            /${this.formatPoint(dataFormat.getUTCFullYear(), 10)}
+        `
     }
 
-    formatPoint(pontuacao) {
-        if(pontuacao < 100) {
+    formatPoint(pontuacao, comparador) {
+        if(pontuacao < comparador) {
             pontuacao = "0"+pontuacao
         }
 

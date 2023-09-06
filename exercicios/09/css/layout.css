@@ -194,14 +194,20 @@ header {
    max-height: 50px;
 }
 
-.game-info{
+.game-info {
    width: auto;
    height: 100%;
-   justify-content: space-between;
-   display: flex;
-   align-items: center;
    text-align: center;
-   padding: 10px;
+   background-color: #453e3d;
+   border-radius: 10px;
+}
+
+.game-info h3 {
+   display: inline-block;
+   margin-top: 10px;
+   margin-left: 25px;
+   margin-right: 25px;
+   color: #fff;
 }
 
 .grupo {
