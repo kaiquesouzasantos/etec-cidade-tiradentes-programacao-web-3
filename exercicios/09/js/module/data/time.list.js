@@ -29,6 +29,6 @@ export let TIMES = [
     new Time("Sacramento Kings", 'https://cdn.nba.com/teams/uploads/sites/1610612758/2022/04/Kings-Primary.svg',["Kings","The Purple and Gold", "The Royal Family"]),
     new Time("San Antonio Spurs", 'https://cdn.nba.com/teams/uploads/sites/1610612759/2022/05/GlobalLogo_WHT-1.svg',["Spurs","The Silver and Black", "The Big Three"]),
     new Time("Toronto Raptors", 'https://cdn.nba.com/teams/uploads/sites/1610612761/2021/09/Toronto-Raptors.svg',["Raptors","The North", "The Jurassic Park Crew"]),
-    new Time("Utah Jazz", 'https://content.sportslogos.net/logos/6/234/full/utah_jazz_logo_primary_2023_sportslogosnet-8513.png',["Jazz","The Purple and White", "The Stockton and Malone Show"]),
+    new Time("Utah Jazz", 'https://kslnewsradio.com/wp-content/uploads/2018/04/jazz-note-pic.png',["Jazz","The Purple and White", "The Stockton and Malone Show"]),
     new Time("Washington Wizards", 'https://cdn.nba.com/teams/uploads/sites/1610612764/2022/06/wiz-primary.svg',["Wizards","The Wiz", "The Bullets"])
 ]

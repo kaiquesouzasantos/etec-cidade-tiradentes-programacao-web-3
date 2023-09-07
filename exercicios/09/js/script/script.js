@@ -43,8 +43,3 @@ function loadHomeImage () {
 
 	document.getElementById('home').style.backgroundImage = imagem
 }
-
-function toggleOptions() {
-	var options = document.querySelector('.select-options');
-	options.style.display = options.style.display === 'block' ? 'none' : 'block';
-}

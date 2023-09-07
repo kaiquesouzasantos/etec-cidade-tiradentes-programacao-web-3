@@ -2,6 +2,7 @@
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
+   background-color: #0d0c0c;
 }
 
 header {
@@ -11,7 +12,6 @@ header {
    width: 100%;
    background-position: center top;
    background-repeat: no-repeat;
-   background-size: cover;
    background-attachment: fixed;
    background-origin: initial;
    background-clip: initial;
@@ -22,7 +22,7 @@ header {
 }
 
 #secao {
-   background-color: #fff;
+   background-color: rgb(4 4 4);
    position: relative;
    width: 100%;
    height: 2000px;
@@ -40,29 +40,31 @@ header {
    display: grid;
    justify-content: space-between;
    grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: auto 100px;
+  
 }
 
 .team {
    text-align: center;
    margin-bottom: 10px;
- }
- 
- .team-img {
+}
+
+.team-img {
    width: 60px;
    height: 60px;
- }
- 
- .vs {
+}
+
+.vs {
    text-align: center;
    font-size: 24px;
-   margin: 10px 0;
- }
- 
- .date {
+   margin: 10px 0px;
+}
+
+.date {
    text-align: center;
    font-size: 14px;
-   color: #999;
- }
+   color: rgb(153, 153, 153);
+}
 
 .jogos {
    flex: 1 1 0%;
@@ -122,7 +124,7 @@ header {
    left: 37%;
 }
 
-.title-pontuacao{
+.title-pontuacao {
    position: relative;
    font-size: 20px;
    top: 63%;
@@ -132,25 +134,26 @@ header {
 .card-container {
    display: flex;
    flex-wrap: wrap;
-   justify-content: center; 
+   justify-content: center;
    align-items: center;
    margin: 100px;
 }
 
 .game-card {
    height: 210px;
-   border: 1px solid #fff;
+   /* border: 1px solid rgb(255, 255, 255); */
    border-radius: 10px;
    margin: 10px;
    padding: 15px;
    width: calc(33.33% - 20px);
    box-sizing: border-box;
-   display: flex;
+   display: grid;
    flex-direction: column;
-   background-color: #fff;
-   top: -343px;
+   background-color: rgb(13 12 12);
+   top: -259px;
    position: relative;
-   box-shadow: 0 3px 19px rgba(65,11,16,.15);
+   box-shadow: rgba(65, 11, 16, 0.15) 0px 3px 19px;
+   justify-content: center;
 }
 
 .teams {
@@ -162,31 +165,33 @@ header {
    padding: 10px;
 }
 
-.teams img{
+.teams img {
    width: 60px;
    height: 60px;
    margin-bottom: 10px;
 }
-.pont{
+
+.pont {
    letter-spacing: 5px;
    text-align: center;
 }
 
-.score{
+.score {
    align-items: center;
    text-align: center;
 }
 
-.time{
+.time {
    height: auto;
    width: auto;
    align-items: center;
    text-align: center;
 }
 
-.nome-time{
+.nome-time {
    font-size: 13px;
-   margin: 0;
+   margin: 0px;
+   color: #b5b5b5;
 }
 
 .team-logo img {
@@ -196,18 +201,22 @@ header {
 
 .game-info {
    width: auto;
-   height: 100%;
+   height: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
    text-align: center;
-   background-color: #453e3d;
+   flex-wrap: nowrap;
+   background-color: rgb(22 22 22);
    border-radius: 10px;
 }
 
 .game-info h3 {
    display: inline-block;
-   margin-top: 10px;
+   margin: 0;
    margin-left: 25px;
    margin-right: 25px;
-   color: #fff;
+   color: rgb(255, 255, 255);
 }
 
 .grupo {
@@ -270,6 +279,7 @@ header .banner-text h3 {
 
 header .banner-text h3 span, header .banner-text h3 a {
    color: rgb(255, 255, 255);
+   background: transparent;
 }
 
 header .banner-text hr {
@@ -307,7 +317,7 @@ header .scrolldown a:hover {
 
 .title-calendar {
    position: relative;
-   color: rgb(19, 19, 19);
+   color: rgb(255 255 255);
    left: -15%;
    top: -147px;
    font: 40px / 1.1em opensans-bold, sans-serif;
@@ -355,8 +365,8 @@ ul#nav li.current a {
    margin: 85px auto 0px;
    position: relative;
    z-index: 999;
-   top: -138%;
-   left: 102%;
+   top: -146%;
+   left: 121%;
 }
 
 .select-btn, li {
@@ -369,11 +379,15 @@ ul#nav li.current a {
    height: 70px;
    padding: 0px 20px;
    font-size: 16px;
-   background: rgb(255, 255, 255);
+   background: rgb(13 12 12);
    border-radius: 7px;
    justify-content: space-between;
-   margin-right: 25%;
+   /* margin-right: 29%; */
    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
+   /* top: -24px; */
+   position: relative;
+   width: 81%;
+   /* left: 20%; */
 }
 
 .select-btn i {
@@ -389,13 +403,16 @@ ul#nav li.current a {
    display: none;
    padding: 20px;
    margin-top: 15px;
-   background: rgb(255, 255, 255);
+   background: rgb(13 12 12);
    border-radius: 7px;
    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
 }
 
 .wrapper.active .content {
    display: block;
+   position: absolute;
+   /* top: 79%; */
+   /* height: 70px; */
 }
 
 .content .search {
@@ -419,7 +436,8 @@ ul#nav li.current a {
    font-size: 16px;
    border-radius: 5px;
    padding: 0px 20px 0px 43px;
-   border: 1px solid rgb(179, 179, 179);
+   border: 1px solid rgb(255 255 255);
+   color: white;
 }
 
 .search input:focus {
@@ -466,3 +484,12 @@ ul#nav li.current a {
    border-radius: 5px;
    background: rgb(242, 242, 242);
 }
+
+.icon-down-circle{
+   color: white;
+}
+
+.smoothscroll{
+   color: white;
+}
+

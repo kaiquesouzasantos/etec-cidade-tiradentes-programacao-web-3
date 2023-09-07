@@ -7,11 +7,13 @@ function eventFilter() {
     const searchWord = searchInp.value.toLowerCase()
     const gameCards = document.querySelectorAll(".game-card")
 
-    if(searchWord == "") 
+    if(searchWord == "") {
         gameCards.forEach(card => {
-            console.log(card)
             card.style.display = "block"
         })
+
+        return
+    }
 
     gameCards.forEach(card => {
         const gameText = card.innerText.toLowerCase()
@@ -22,10 +24,6 @@ function eventFilter() {
 }
 
 searchInp.addEventListener("keyup", () => {
-    eventFilter()
-})
-
-searchInp.addEventListener("click", () => {
     eventFilter()
 })
 
