@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Kaique Souza Santos, Henry Oliveira Modesto da Jesus, Kauan Gabriel Franca Rodrigues">
+  <title>04 | Gerador de Curriculo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/style_index.css">
+  <script src="js/script/script_index.js" defer></script>
+  <script src="js/mask/mask_money.js"></script>
+  <script src="js/mask/mask_phone.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <img src="image/fundo_roxo.svg" class="fundo" alt="">
+    <img src="image/retangulo_1.svg" class="retangulo_1" alt="">
+    <img src="image/retangulo_2.svg" class="retangulo_2" alt="">
+    <img src="image/retangulo_3.svg" class="retangulo_3" alt="">
+    <img src="image/retangulo_4.svg" class="retangulo_4" alt="">
+    <img src="image/line_line.svg" class="line_line">
+    <img src="image/line_line2.svg" class="line_line2">
+    <img src="image/curriculo.png" class="curriculo">
+    <img src="image/line_line3.svg" class="line3">
+
+    <header class="sobreposta">Gerador de curriculo</header>
+    <div class="form-outer">
+      <img src="image/retangulo_4.svg" class="retangulo_4" alt="">
+    </div>
+
+    <div class="containerP">
+      <div class="steps">
+        <span class="circle active">1</span>
+        <span class="circle">2</span>
+        <span class="circle">3</span>
+        <span class="circle">4</span>
+      </div>
+    </div>
+    <div class="progress-bar">
+      <span class="indicator"></span>
+    </div>
+
+    <!--DADOS PESSOAIS-->
+    <div class="card">
+      <div id="content1" class="content">
+        <div class="title_experi">DADOS PESSOAIS</div>
+
+        <div class="title_cargo">CARGO DESEJADO</div>
+        <input id="text_cargo_desejado" type="text" class="text_cargo" placeholder="Por exemplo: professora" maxlength="40" required>
+
+        <div class="title_name">NOME COMPLETO</div>
+        <input id="text_name" type="text" class="text_name" maxlength="50" required>
+
+        <div class="title_email">EMAIL</div>
+        <input id="text_email" type="text" class="text_email" maxlength="50" required>
+
+        <div class="title_picture">CARREGAR FOTO</div>
+        <label class="picture" for="picture__input" tabIndex="0">
+          <span class="picture__image"></span>
+        </label>
+
+        <img src="image/avatar.png" class="avatar" id="avatar">
+        <input type="file" name="picture__input" id="picture__input" accept="image/jpeg, image/png, image/jpg">
+
+        <div class="title_telefone">TELEFONE</div>
+        <input id="telefone" type="tel" class="text_telefone" required maxlength="15" onkeypress="mask(this, mphone);" onblur="mask(this, mphone);">
+
+        <div class="title_idiomas">DATA DE NASCIMENTO</div>
+        <input id="text_nascimento" type="date" class="text_nasc" min="1950-01-01" max="2023-12-30" required>
+
+        <div class="buttons">
+          <button id="prev" class="btn_voltar" disabled>VOLTAR</button>
+          <button id="next" class="btn_proximo2" onclick="trocaDiv('content1', 'content2')">PRÓXIMO</button>
+        </div>
+      </div>
+
+      <!--EXPERIÊNCIAS PROFISSIONAIS-->
+      <div id="content2" class="content" style="display:none">
+        <div class="title_experi">EXPERIÊNCIA</div>
+
+        <div class="title_cargo">CARGO</div>
+        <input id="text_cargo" type="text" class="text_cargo" maxlength="30" required>
+
+        <div class="title_termino">DATA DE INICIO E TÉRMINO</div>
+        <input id="text_inicio" type="date" class="text_inicio" min="2000-01-01" max="2023-12-30" required>
+        <input id="text_termino" type="date" class="text_termino" min="2000-01-01" max="2023-12-30" required>
+
+        <div class="title_empresa">EMPRESA</div>
+        <input id="text_empresa" type="text" class="text_empresa" maxlength="30" required>
+
+        <div class="title_cidade">SALARIO</div>
+        <input id="salario" type="text" class="text_cidade" oninput="formatInputMoney(this)" required>
+
+        <div class="title_descricao1">DESCRIÇÃO</div>
+        <textarea id="text_descricao_experiencia" type="text" class="text_descricao1"
+          placeholder="Por exemplo: Criei e implementei planos de aula com base nas crianças" maxlength="300" required></textarea>
+        <br>
+        <br>
+        <div class="buttons">
+          <button id="prev" class="btn_voltar" onclick="trocaDiv('content2', 'content1')">VOLTAR</button>
+          <button id="next" class="btn_proximo2" onclick="trocaDiv('content2', 'content3')">PRÓXIMO</button>
+        </div>
+      </div>
+
+      <!--FORMAÇÃO-->
+      <div id="content3" class="content" style="display:none">
+        <div class="title_experi">FORMAÇÃO</div>
+
+        <div class="title_cargo">CURSO</div>
+        <input id="text_curso" type="text" class="text_cargo" maxlength="50" required>
+
+        <div class="title_termino">DATA DE INICIO E TÉRMINO</div>
+        <input id="text_inicio_curso" type="date" class="text_inicio" min="2000-01-01" max="2023-12-30" required>
+        <input id="text_termino_curso" type="date" class="text_termino" min="2000-01-01" max="2023-12-30" required>
+
+        <div class="title_empresa">GRAU ESCOLAR</div>
+        <input id="text_escolaridade" type="text" class="text_empresa" maxlength="30" required>
+
+        <div class="title_cidade">INSTITUICÃO</div>
+        <input id="text_instituicao_curso" type="text" class="text_cidade" maxlength="50" required>
+
+        <div class="title_descricao1">DESCRIÇÃO</div>
+        <textarea id="text_descricao_curso" type="text" class="text_descricao1" placeholder="Por exemplo: Graduado em recursos humanos" maxlength="300" required></textarea>
+
+        <div class="buttons">
+          <button id="prev" class="btn_voltar" onclick="trocaDiv('content3', 'content2')">VOLTAR</button>
+          <button id="next" class="btn_proximo2" onclick="trocaDiv('content3', 'content4')">PRÓXIMO</button>
+        </div>
+      </div>
+      
+
+      <!--CURSOS-->
+        <div id="content4" class="content" style="display:none">
+           <div class="title_experi">CURSOS</div>
+      
+            <div class="title_cargo">CURSO</div>
+            <input id="text_curso_c" type="text" class="text_cargo" maxlength="50" required>
+      
+            <div class="title_termino">DATA DE INICIO E TÉRMINO</div>
+            <input id="text_inicio_curso_c" type="date" class="text_inicio" min="2000-01-01" max="2023-12-30" required>
+            <input id="text_termino_curso_c" type="date" class="text_termino" min="2000-01-01" max="2023-12-30" required>
+      
+            <div class="title_empresa">AREA</div>
+            <select name id="text_curso_tipo" class="text_empresa">
+              <option value="Desenvolvedor Web">WEB-DEVELOPER</option>
+              <option value="Desenvolvedor Full-Stack">FULL-STACK</option>
+              <option value="Desenvolvedor Front-End">FRONT-END</option>
+              <option value="Desenvolvedor Back-End">BACK-END</option>
+              <option value="Designer">DESIGNER UI-UX</option>
+              <option value="DBA">DBA</option>
+              <option value="Analista de Projetos">ANALISTA</option>
+              <option value="Gestor de Projetos">GESTOR</option>
+              <option value="Tester QA">QA</option>
+              <option value="Tech-Lead">TECH-LEAD</option>
+            </select>
+            
+            <div class="title_cidade">INSTITUICÃO</div>
+            <input id="text_instituicao_curso_c" type="text" class="text_cidade" maxlength="50" required>
+
+            <div class="title_descricao1">DESCRIÇÃO</div>
+            <textarea id="text_descricao_curso_c" type="text" class="text_descricao1" placeholder="Por exemplo: Cursei 3 anos como DBA na instituição dataside" maxlength="400" required></textarea>
+      
+            <div class="buttons">
+              <button id="prev" class="btn_voltar" onclick="trocaDiv('content4', '')">VOLTAR</button>
+              <button id="btn_proximo" class="btn_proximo2">FINALIZAR</button> 
+            </div>
+          </div>
+    </div>
+  </div>
+</body>
+
+</html>

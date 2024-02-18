@@ -1,0 +1,495 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   background-color: #0d0c0c;
+}
+
+header {
+   position: relative;
+   height: 2000px;
+   min-height: 500px;
+   width: 100%;
+   background-position: center top;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-origin: initial;
+   background-clip: initial;
+   background-color: rgb(255, 255, 255);
+   text-align: center;
+   overflow: hidden;
+   background-size: cover !important;
+}
+
+#secao {
+   background-color: rgb(4 4 4);
+   position: relative;
+   width: 100%;
+   height: 2000px;
+}
+
+.calendar {
+   position: relative;
+   padding: 1.5rem;
+   border-radius: 0.5rem;
+   font-size: 1.6rem;
+   font-weight: bold;
+   width: 100%;
+   height: 200px;
+   color: rgb(5, 29, 49);
+   display: grid;
+   justify-content: space-between;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: auto 100px;
+  
+}
+
+.team {
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.team-img {
+   width: 60px;
+   height: 60px;
+}
+
+.vs {
+   text-align: center;
+   font-size: 24px;
+   margin: 10px 0px;
+}
+
+.date {
+   text-align: center;
+   font-size: 14px;
+   color: rgb(153, 153, 153);
+}
+
+.jogos {
+   flex: 1 1 0%;
+   min-width: 321px;
+   padding: 10px;
+   border: 1px solid rgb(204, 204, 204);
+   box-sizing: border-box;
+   position: relative;
+   top: -182%;
+   right: -25%;
+   display: flex;
+   height: 230px;
+}
+
+.Usa {
+   position: relative;
+   width: 20%;
+   height: 21%;
+   right: -8%;
+   top: 28%;
+}
+
+.Gales {
+   position: relative;
+   width: 20%;
+   height: 24%;
+   left: -11%;
+   top: 30%;
+}
+
+.vs {
+   font: 30px / 1.1em opensans-bold, sans-serif;
+   position: relative;
+   top: 33%;
+   right: 14%;
+}
+
+.title-usa {
+   position: relative;
+   top: 52%;
+   right: 10%;
+   font-size: 15px;
+   white-space: nowrap;
+}
+
+.description {
+   position: relative;
+   white-space: nowrap;
+   top: 7%;
+   left: 9%;
+}
+
+.title-gales {
+   position: relative;
+   font-size: 20px;
+   top: 23%;
+   left: 37%;
+}
+
+.title-pontuacao {
+   position: relative;
+   font-size: 20px;
+   top: 63%;
+   left: -31%;
+}
+
+.card-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin: 100px;
+}
+
+.game-card {
+   height: 210px;
+   /* border: 1px solid rgb(255, 255, 255); */
+   border-radius: 10px;
+   margin: 10px;
+   padding: 15px;
+   width: calc(33.33% - 20px);
+   box-sizing: border-box;
+   display: grid;
+   flex-direction: column;
+   background-color: rgb(13 12 12);
+   top: -259px;
+   position: relative;
+   box-shadow: rgba(65, 11, 16, 0.15) 0px 3px 19px;
+   justify-content: center;
+}
+
+.teams {
+   width: auto;
+   height: auto;
+   justify-content: space-between;
+   display: flex;
+   align-items: center;
+   padding: 10px;
+}
+
+.teams img {
+   width: 60px;
+   height: 60px;
+   margin-bottom: 10px;
+}
+
+.pont {
+   letter-spacing: 5px;
+   text-align: center;
+}
+
+.score {
+   align-items: center;
+   text-align: center;
+}
+
+.time {
+   height: auto;
+   width: auto;
+   align-items: center;
+   text-align: center;
+}
+
+.nome-time {
+   font-size: 13px;
+   margin: 0px;
+   color: #b5b5b5;
+}
+
+.team-logo img {
+   max-width: 50px;
+   max-height: 50px;
+}
+
+.game-info {
+   width: auto;
+   height: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   flex-wrap: nowrap;
+   background-color: rgb(22 22 22);
+   border-radius: 10px;
+}
+
+.game-info h3 {
+   display: inline-block;
+   margin: 0;
+   margin-left: 25px;
+   margin-right: 25px;
+   color: rgb(255, 255, 255);
+}
+
+.grupo {
+   position: relative;
+   top: 7%;
+   white-space: nowrap;
+   left: 6%;
+}
+
+.data {
+   position: relative;
+   white-space: nowrap;
+   top: 88%;
+   right: 18%;
+   font: 15px / 1.1em opensans-bold, sans-serif;
+   align-items: flex-end;
+}
+
+.horario {
+   position: relative;
+   top: 47%;
+   right: 33%;
+}
+
+header::before {
+   content: "";
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+
+header .banner {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 0px auto;
+   width: 85%;
+   padding-bottom: 30px;
+   text-align: center;
+}
+
+header .banner-text {
+   width: 100%;
+}
+
+header .banner-text h1 {
+   font: 90px / 1.1em opensans-bold, sans-serif;
+   color: rgb(255, 255, 255);
+   letter-spacing: -2px;
+   margin: 0px auto 18px;
+   text-shadow: rgba(0, 0, 0, 0.8) 0px 1px 3px;
+}
+
+header .banner-text h3 {
+   font: 18px / 1.9em opensans-regular, serif;
+   color: rgb(168, 168, 168);
+   margin: 0px auto;
+   width: 55%;
+   text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+}
+
+header .banner-text h3 span, header .banner-text h3 a {
+   color: rgb(255, 255, 255);
+   background: transparent;
+}
+
+header .banner-text hr {
+   width: 60%;
+   margin: 18px auto 24px;
+}
+
+header .scrolldown a {
+   position: absolute;
+   bottom: 30px;
+   left: 50%;
+   margin-left: -29px;
+   display: block;
+   height: 42px;
+   width: 42px;
+   font-size: 42px;
+   line-height: 42px;
+   color: rgb(255, 255, 255);
+   border-radius: 100%;
+   transition: all 0.3s ease-in-out 0s;
+}
+
+header .scrolldown a:hover {
+   color: rgb(171, 171, 171);
+}
+
+.about {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 50px;
+   margin: 100px;
+}
+
+.title-calendar {
+   position: relative;
+   color: rgb(255 255 255);
+   left: -15%;
+   top: -147px;
+   font: 40px / 1.1em opensans-bold, sans-serif;
+   white-space: nowrap;
+}
+
+ul#nav {
+   min-height: 48px;
+   width: auto;
+   text-align: center;
+}
+
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+ul#nav li a {
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+   text-decoration: none;
+   text-align: left;
+   color: rgb(255, 255, 255);
+   transition: color 0.2s ease-in-out 0s;
+}
+
+ul#nav li a:active {
+   background-color: transparent !important;
+}
+
+ul#nav li.current a {
+   color: rgb(240, 96, 0);
+}
+
+::selection {
+   color: rgb(255, 255, 255);
+   background: rgb(66, 133, 244);
+}
+
+.wrapper {
+   width: 370px;
+   margin: 85px auto 0px;
+   position: relative;
+   z-index: 999;
+   top: -146%;
+   left: 121%;
+}
+
+.select-btn, li {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+
+.select-btn {
+   height: 70px;
+   padding: 0px 20px;
+   font-size: 16px;
+   background: rgb(13 12 12);
+   border-radius: 7px;
+   justify-content: space-between;
+   /* margin-right: 29%; */
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
+   /* top: -24px; */
+   position: relative;
+   width: 81%;
+   /* left: 20%; */
+}
+
+.select-btn i {
+   font-size: 31px;
+   transition: transform 0.3s linear 0s;
+}
+
+.wrapper.active .select-btn i {
+   transform: rotate(-180deg);
+}
+
+.content {
+   display: none;
+   padding: 20px;
+   margin-top: 15px;
+   background: rgb(13 12 12);
+   border-radius: 7px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px;
+}
+
+.wrapper.active .content {
+   display: block;
+   position: absolute;
+   /* top: 79%; */
+   /* height: 70px; */
+}
+
+.content .search {
+   position: relative;
+}
+
+.search i {
+   top: 50%;
+   left: 15px;
+   color: rgb(153, 153, 153);
+   font-size: 16px;
+   pointer-events: none;
+   transform: translateY(-50%);
+   position: absolute;
+}
+
+.search input {
+   height: 50px;
+   width: 100%;
+   outline: none;
+   font-size: 16px;
+   border-radius: 5px;
+   padding: 0px 20px 0px 43px;
+   border: 1px solid rgb(255 255 255);
+   color: white;
+}
+
+.search input:focus {
+   padding-left: 42px;
+   border: 2px solid rgb(66, 133, 244);
+}
+
+.search input::placeholder {
+   color: rgb(191, 191, 191);
+}
+
+.content .options {
+   margin-top: 10px;
+   max-height: 250px;
+   overflow-y: auto;
+   padding-right: 7px;
+}
+
+.options::-webkit-scrollbar {
+   width: 7px;
+}
+
+.options::-webkit-scrollbar-track {
+   background: rgb(241, 241, 241);
+   border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb {
+   background: rgb(204, 204, 204);
+   border-radius: 25px;
+}
+
+.options::-webkit-scrollbar-thumb:hover {
+   background: rgb(179, 179, 179);
+}
+
+.options li {
+   height: 50px;
+   padding: 0px 13px;
+   font-size: 16px;
+}
+
+.options li:hover, li.selected {
+   border-radius: 5px;
+   background: rgb(242, 242, 242);
+}
+
+.icon-down-circle{
+   color: white;
+}
+
+.smoothscroll{
+   color: white;
+}
+

@@ -1,0 +1,25 @@
+﻿ /* Cubo */
+ section#main section.cubo {
+     background: #003075;
+     left: 0;
+     margin-left: 0;
+     padding-bottom: 0;
+     position: relative;
+     width: 100%;
+ }
+
+ section#main section.cubo #cubo-canvas {
+     height: 320px;
+     left: 50%;
+     margin-left: -160px;
+     position: relative;
+     width: 320px;
+ }
+
+ section#main section.cubo #cubo-canvas canvas {
+     width: 320px;
+ }
+
+ section#main section.cubo #cubo-canvas.fixed {
+     position: relative;
+ }
